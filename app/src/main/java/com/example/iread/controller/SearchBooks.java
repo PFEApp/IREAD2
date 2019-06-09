@@ -190,7 +190,9 @@ public class SearchBooks extends AppCompatActivity {
         }
         String final_query=search_query.replace(" ","+");
         Uri uri=Uri.parse(BASE_URL+final_query);
-        Uri.Builder buider = uri.buildUpon();
+        Uri.Builder buider = uri.buildUpon();//Constructs a new builder, copying the attributes from this Uri.
+
+
 
         parseJson(buider.toString());
     }

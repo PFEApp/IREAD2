@@ -35,11 +35,15 @@ public class ChatAdapter extends FirestoreRecyclerAdapter<friends,ChatAdapter.Ch
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 User user = documentSnapshot.toObject(User.class);
                 holder.name.setText(user.getUsername());
-                if(user.getUrlPicture() != null)
-                   Glide.with(holder.itemView.getContext())
-                        .load(user.getUrlPicture())
-                        .apply(RequestOptions.circleCropTransform())
-                        .into(holder.imgfriend);
+                if(user.getUrlPicture() != null) {
+                    try {
+                        Glide.with(holder.itemView.getContext())
+                                .load(user.getUrlPicture())
+                                .apply(RequestOptions.circleCropTransform())
+                                .into(holder.imgfriend);
+                    }catch (Exception e){}
+                }
+
             }
         });
     }

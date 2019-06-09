@@ -19,7 +19,8 @@
             android:textAlignment="center"
             android:textColor="@color/cardview_dark_background"
             android:text="Defi de cette mois"/>
-        <ScrollView android:layout_marginTop="10dp"
+        <ScrollView
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <LinearLayout

@@ -32,13 +32,26 @@
         android:id="@+id/Clicked_friend_btn_deja"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="deja lu"/>
+        android:text="deja lu"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:background="@drawable/button_radius_primary_color"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_margin="5dp"
+        android:padding="@dimen/default_margin"/>
 
     <Button
         android:id="@+id/Clicked_friend_btn_entrain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="en train de lire"/>
+        android:text="en train de lire"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:background="@drawable/button_radius_accent_color"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_margin="5dp"
+        android:layout_marginTop="10dp"
+        android:padding="@dimen/default_margin"/>
 
 </LinearLayout>
 </LinearLayout>

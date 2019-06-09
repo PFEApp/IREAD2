@@ -166,7 +166,6 @@ public class HomeActivity extends BaseActivity implements NewsPageFragment.OnQui
         }
         else if (btn1.getText().equals("Resulta")){
             quiz = String.valueOf(1);
-            Toast.makeText(getApplicationContext(),"Quiz bnt1: "+quiz,Toast.LENGTH_LONG).show();
             findResult();
         }else{
             Intent myint = new Intent(this, QuizActivity.class);
@@ -185,7 +184,6 @@ public class HomeActivity extends BaseActivity implements NewsPageFragment.OnQui
         }
         else if (btn2.getText().equals("Resulta")){
             quiz = String.valueOf(2);
-            Toast.makeText(getApplicationContext(),"Quiz btn2: "+quiz,Toast.LENGTH_LONG).show();
             findResult();
         }else{
             Intent myint = new Intent(this, QuizActivity.class);
@@ -207,7 +205,6 @@ public class HomeActivity extends BaseActivity implements NewsPageFragment.OnQui
         }
         else if (btn3.getText().equals("Resulta")){
             quiz = String.valueOf(3);
-            Toast.makeText(getApplicationContext(),"Quiz bnt3: "+quiz,Toast.LENGTH_LONG).show();
             findResult();
         }else{
             Intent myint = new Intent(this, QuizActivity.class);

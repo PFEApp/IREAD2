@@ -47,24 +47,13 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:layout_marginTop="10dp"
                         android:layout_width="100dp"
-                        android:layout_height="130dp"
+                        android:layout_height="150dp"
                         android:background="@drawable/loading_shape"
                         android:id="@+id/aa_thumbnail"
                         android:scaleType="centerCrop"/>
-                    <Button
-                        android:id="@+id/aa_select_book"
-                        android:layout_width="80dp"
-                        android:layout_gravity="center"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/link_background"
-                        android:text="A Lire"
-                        android:padding="5dp"
-                        android:textSize="15sp"
-                        android:textColor="#fff"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:layout_marginTop="5dp"/>
+
 
 
 
@@ -86,17 +75,12 @@
                         android:text="Book Title"
                         android:textStyle="bold"
                         android:textSize="18sp" />
-
                     <TextView
                         android:layout_marginTop="3dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Category"
                         android:id="@+id/aa_categorie"/>
-
-
-
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -110,6 +94,34 @@
                         android:layout_marginTop="5dp"
                         android:id="@+id/aa_publish_date"/>
 
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/aa_share_book"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/link_background"
+                            android:text="Partage"
+                            android:padding="5dp"
+                            android:textSize="15sp"
+                            android:textColor="#fff"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"
+                            android:layout_margin="5dp"/>
+                        <Button
+                            android:id="@+id/aa_select_book"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/link_background"
+                            android:text="A Lire"
+                            android:padding="5dp"
+                            android:textSize="15sp"
+                            android:textColor="#fff"
+                            android:textStyle="bold"
+                            android:layout_margin="5dp"/>
+                    </LinearLayout>
 
 
                 </LinearLayout>

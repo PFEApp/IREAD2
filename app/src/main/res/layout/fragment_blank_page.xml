@@ -7,85 +7,189 @@
     tools:context="com.example.iread.Fragment.BlankFragment"
     android:gravity="center"
     android:background="@color/colorSandLight"
-    android:orientation="vertical">
-
-
-    <LinearLayout
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--ETERAGES-->
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:layout_marginTop="50dp">
-        <Button
-            android:id="@+id/fragment_blank_add"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ajouter des amis"/>
-
-        <Button
-            android:id="@+id/fragment_blank_view_invitation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="voir les invitation"/>
-
-        <Button
-            android:id="@+id/fragment_blank_view_defi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="voir les defis"/>
-        <Button
-            android:id="@+id/fragment_blank_view_friends"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="voir vos amis"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight="1">
-
-        <!--ETERAGES-->
+        android:layout_height="match_parent">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:gravity="center"
             android:text="ETERAGES"
             android:textColor="#000000"
-            android:textSize="18sp" />
-        <Button
-            android:id="@+id/fragment_blank_btn_deja"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+        <LinearLayout
+            android:layout_marginTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Deja Lu"
-            android:textColor="#fff"
-            android:textSize="18sp"
-            android:background="@drawable/button_radius_primary_color"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_margin="@dimen/default_margin"
-            android:padding="@dimen/default_margin"/>
+            >
+            <ListView
+                android:id="@+id/fragment_blank_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp">
+            </ListView>
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/fragment_blank_btn_entrain"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="En Train de Lire"
-            android:textColor="#fff"
-            android:textSize="18sp"
-            android:background="@drawable/button_radius_accent_color"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_margin="@dimen/default_margin"
-            android:padding="@dimen/default_margin"/>
-        <Button
-            android:id="@+id/fragment_blank_a_lire"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="a Lire"
-            android:textColor="#fff"
-            android:textSize="18sp"
-            android:background="@drawable/button_radius_error_color"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_margin="10dp"
-            android:padding="10dp"/>
-    </LinearLayout>
-</LinearLayout>
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true">
+            <LinearLayout
+                android:id="@+id/floatingActionbuttonLinear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_above="@+id/floatingActionbutton"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="-20dp"
+                android:visibility="invisible">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="end">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ajouter des Amis"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        />
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/floatingActionbuttonSearcheFriends"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="5dp"
+                        app:fabSize="mini"
+                        app:backgroundTint="@color/colorPrimary"
+                        android:src="@drawable/ic_005_find_my_friend"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Voir les Invitations"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:layout_marginRight="5dp"/>
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/floatingActionbuttonRequest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="5dp"
+                        app:backgroundTint="@color/colorPrimary"
+                        app:fabSize="mini"
+                        android:src="@drawable/ic_002_add_contact"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Voir Les Defis "
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"/>
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/floatingActionbuttonChallenge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="5dp"
+                        app:fabSize="mini"
+                        app:backgroundTint="@color/colorPrimary"
+                        android:src="@drawable/ic_001_podium"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Voir vos Amis"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:layout_marginRight="5dp"/>
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/floatingActionbuttonFriends"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="5dp"
+                        app:fabSize="mini"
+                        app:backgroundTint="@color/colorPrimary"
+                        android:src="@drawable/ic_011_group"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floatingActionbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_stars_black_24dp"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="25dp"
+                app:backgroundTint="@color/colorPrimary"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout >
+<!--
+ <Button
+                    android:id="@+id/fragment_blank_btn_deja"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Deja Lu"
+                    android:textColor="#fff"
+                    android:textSize="18sp"
+                    android:background="@drawable/button_radius_primary_color"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_margin="5dp"
+                    android:padding="@dimen/default_margin"/>
+
+                <Button
+                    android:id="@+id/fragment_blank_btn_entrain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="En Train de Lire"
+                    android:textColor="#fff"
+                    android:textSize="18sp"
+                    android:background="@drawable/button_radius_accent_color"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_margin="5dp"
+                    android:padding="@dimen/default_margin"/>
+                <Button
+                    android:id="@+id/fragment_blank_a_lire"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="a Lire"
+                    android:textColor="#fff"
+                    android:textSize="18sp"
+                    android:background="@drawable/button_radius_error_color"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_margin="5dp"
+                    android:padding="10dp"/>
+
+-->

@@ -146,8 +146,9 @@ public class NewsPageFragment extends Fragment {
                     titre1.setText(book.getName());
                     auth1.setText(book.getAuteur());
                     rat1.setRating(Float.parseFloat(book.getStar()));
-
-                    Glide.with(getContext()).load(book.getImage()).into(img1);
+                    try {
+                        Glide.with(getContext()).load(book.getImage()).into(img1);
+                    }catch (Exception e){}
                 }
 
                 @Override
@@ -166,7 +167,9 @@ public class NewsPageFragment extends Fragment {
                 titre2.setText(strr.insert(22,"\n"));
                 auth2.setText(book.getAuteur());
                 rat2.setRating(Float.parseFloat(book.getStar()));
-                Glide.with(getContext()).load(book.getImage()).into(img2);
+                try {
+                    Glide.with(getContext()).load(book.getImage()).into(img2);
+                }catch (Exception e){}
             }
 
             @Override
@@ -183,7 +186,9 @@ public class NewsPageFragment extends Fragment {
                 titre3.setText(book.getName());
                 auth3.setText(book.getAuteur());
                 rat3.setRating(Float.parseFloat(book.getStar()));
-                Glide.with(getContext()).load(book.getImage()).into(img3);
+                try {
+                    Glide.with(getContext()).load(book.getImage()).into(img3);
+                }catch (Exception e){}
             }
 
             @Override
@@ -199,7 +204,9 @@ public class NewsPageFragment extends Fragment {
                 titre4.setText(book.getName());
                 auth4.setText(book.getAuteur());
                 rat4.setRating(Float.parseFloat(book.getStar()));
-                Glide.with(getContext()).load(book.getImage()).into(img4);
+                try {
+                    Glide.with(getContext()).load(book.getImage()).into(img4);
+                }catch (Exception e){}
             }
 
             @Override
@@ -216,7 +223,9 @@ public class NewsPageFragment extends Fragment {
                 titre5.setText(book.getName());
                 auth5.setText(book.getAuteur());
                 rat5.setRating(Float.parseFloat(book.getStar()));
-                Glide.with(getContext()).load(book.getImage()).into(img5);
+                try {
+                    Glide.with(getContext()).load(book.getImage()).into(img5);
+                }catch (Exception e){}
             }
 
             @Override

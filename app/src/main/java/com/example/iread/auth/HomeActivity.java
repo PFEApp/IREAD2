@@ -233,7 +233,7 @@ public class HomeActivity extends BaseActivity implements NewsPageFragment.OnQui
     @Override
     public void OnLire2Click(View view){
         Intent myint = new Intent(this,LivreActivity.class);
-        myint.putExtra("child","3.pdf");
+        myint.putExtra("child","2.pdf");
         startActivity(myint);
     }
     @Override

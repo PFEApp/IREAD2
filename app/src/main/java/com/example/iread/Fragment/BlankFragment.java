@@ -21,7 +21,7 @@ public class BlankFragment extends Fragment {
     private FloatingActionButton start;
     private LinearLayout lin;
     private ListView list;
-    private String[] words = {"Deja Lu","Entran De Lire","A Lire","Recommandation Des Amis"};
+    private String[] words = {"Deja Lu","Entran De Lire","A Lire"};
     public static BlankFragment newInstance() {
         return (new BlankFragment());
     }

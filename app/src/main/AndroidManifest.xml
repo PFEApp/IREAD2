@@ -8,9 +8,11 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".controller.AccepteDefi2Activity"
+        <activity android:name=".controller.RecommendActivity"></activity>
+        <activity
+            android:name=".controller.AccepteDefi2Activity"
             android:label="Accepte Defi"
-            android:parentActivityName=".auth.HomeActivity"/>
+            android:parentActivityName=".auth.HomeActivity" />
         <activity
             android:name=".controller.ALireActivity"
             android:label="A Lire"
@@ -39,7 +41,7 @@
         <activity
             android:name=".controller.EntrainActivty"
             android:label="En train de lire"
-            android:parentActivityName=".auth.HomeActivity"/>
+            android:parentActivityName=".auth.HomeActivity" />
         <activity
             android:name=".controller.DejaLuActivity"
             android:label="Deja lu"
